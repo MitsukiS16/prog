@@ -1,6 +1,6 @@
-# uni
+# **UNIVERSITY**
 
-<p align="center"><i>"How to have 20?"</i> </p>
+<p align="center"><i>"Waht are you willing to sacrifice for..."</i> </p>
 
 <p align="center"> 
   <a href="---">
@@ -16,11 +16,6 @@
 </p>
 
 <p align="center">
-  <a href="#blush-why">Lectures</a> •
-  <a href="#art-about-me">About Me</a>
-</p>
-
-<p align="center">
   <kbd>
     <img width="150" style="border-radius: 5px" height="" src="https://i.pinimg.com/originals/31/4a/9a/314a9a4ebab244d94747277b112f34f1.gif" alt="Laugh pls">
     <img width="150" style="border-radius: 5px" height="" src="https://c.tenor.com/PfGNM2Yw-58AAAAi/mochi-mochi-peach-cat-tap-butt.gif" alt="Laugh pls">
@@ -30,20 +25,8 @@
 
 
 
-## **Lectures**
+## **UC's**
 
-...
-
-
-
-##  **Roadmap**
-
-Check our [board](https://github.com/animavita/animavita/...) for more details about what we're building.
-
--   [ ] .. next version (Expo, Relay and GraphQL)
-
-## **Tech Stack**
-
--   [Facebook Login](https://github.com/facebook/..)
-
-and much more...
+[BDad](/bdad/bdad.md) •
+[SOf](/ldts/ldts.md) •
+[LDTS](/ldts/ldts.md)
