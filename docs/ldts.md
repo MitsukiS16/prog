@@ -30,7 +30,7 @@
 </p>
 
 ## :heart: **Lad Tutorial**
-- [ ] Lab Tutorial: GitHub
+- [X] Lab Tutorial: GitHub
 - [ ] Lab Tutorial: Java and Gradle (1/2)
 
 ----
@@ -45,7 +45,7 @@
 ### :arrow_right: **Week 2**
 
 - [ ] Java
-- [ ] Lab Tutorial: GitHub
+- [X] Lab Tutorial: GitHub
 - [ ] Projeto Intelij
 
 ### :arrow_right: **Week 3**
@@ -161,6 +161,7 @@ Notes: JDK >= 17
 | ``` git config --global user.name ``` | Add name, for you commits have your name attached to them |
 | ``` git config ---global user.email ``` | Add email, for you commits have your email attached to them |
 | ``` git rebase master ``` | MOve the entire feature branch to start from the tip of the master branch by rewriting the project history and creating brand new commits for each commit in the original branch. | 
+| ``` git diff filename.txt ``` | Check what unstaged changes exist |
 
 
 
