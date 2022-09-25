@@ -17,8 +17,8 @@
 
 <p align="center">
   <kbd>
-    <img width="150" style="border-radius: 5px" height="" src="https://i.pinimg.com/originals/31/4a/9a/314a9a4ebab244d94747277b112f34f1.gif" alt="Laugh pls">
-    <img width="150" style="border-radius: 5px" height="" src="https://c.tenor.com/PfGNM2Yw-58AAAAi/mochi-mochi-peach-cat-tap-butt.gif" alt="Laugh pls">
+    <img width="" style="border-radius: 5px" height="150" src="https://i.pinimg.com/originals/31/4a/9a/314a9a4ebab244d94747277b112f34f1.gif" alt="Laugh pls">
+    <img width="" style="border-radius: 5px" height="150" src="https://c.tenor.com/PfGNM2Yw-58AAAAi/mochi-mochi-peach-cat-tap-butt.gif" alt="Laugh pls">
 
 </p>
 
