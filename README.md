@@ -1,6 +1,6 @@
 
 <p align="center"> 
-    <img src="/home/sissi/uni/images/college-title.png" alt="University of Porto">
+    <img src="images/college-title.png" alt="University of Porto">
 </p>
 
 ----
