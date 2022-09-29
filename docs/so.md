@@ -1,28 +1,32 @@
-# software Eng
+# SO
 
+```
+ [Sistemas Operativos]
 
-*Bash*
-
-§ chmod gotw filename.txt -> it changes the got to w
-
-u have - --- --- ---
-or u have -rwx rwx rwx
-or u have -rw- rw- r--
-it means -u g o
+ Professor: ??
+```
 
 
 
-chmod got w filename.txt -> it change one step at time
-but if u use binary
-then u can change like this
+## :heart: **Info**
+<p align="center">
+  <a href="#arrow_right-introduction">Introduction</a> • 
+  Operating System Structures</a>
+</p>
 
-$chmod 644 filename.txt -> it changes everything (if there is anything to change)
-basicly, 
-if u have 
+----
 
--rwr--r--
-and u right chmod 644 filename.txt
-then nothing happends
-but if you right chmod 550 filename.txt
-then it changes to -> r-xr-x---
-get it :)))
+## :heart: **Week**
+- [ ] Chapter 1 - Introduction
+- [ ] Chapter 2 - Operating-System Structures
+
+### :arrow_right: **AP**
+
+- [ ] Assignment #1
+- [ ] Assignment #2
+- [ ] Assignment #3
+
+----
+
+### :arrow_right: **Introduction**
+
