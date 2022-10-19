@@ -27,17 +27,29 @@
 ## **UC's**
 
 <p align="center"> 
-  <a href="/home/sissi/uni/docs/bdad.md"> BDad 
+  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/bdad.md"> BDad 
   </a>
   • 
   <a href="https://github.com/MitsukiS16/uni/blob/main/docs/so.md"> SO 
   </a>
   •
-  <a href="https://github.com/MitsukiS16/uni/blob/ba984e10952f008170a4f2ba9396cc74f6d078d3/docs/ldts.md"> LDTS 
+  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/ldts.md"> LDTS 
   </a>
+  •
+  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/fsc.md"> FSC 
+  </a>
+    •
+  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/f2.md"> F2
+  </a>
+
 </p>
 
-## **Other** 
 
-idkkk-
+## **Moment of Evaluation** 
 
+| UC | Date | Type | Other |
+| --- | --- | --- | --- | 
+| LDTS | 24 out | Test - T| - | 
+| SO | 26 out | Test - T | - | 
+| --- | --- | --- | --- | 
+| --- | --- | --- | --- | 

@@ -1,0 +1,55 @@
+Semana 3
+
+1
+a)
+        =----
+A * B + A + B + A * C
+     = -
+AB + A*B + AC
+       _
+AB + A*B + AC
+      _
+A(B + B) + AC
+
+A + AC
+
+A(1+C)
+
+A 
+
+
+h)
+                 _   _       _   _
+F = (A+B+C)*(A+B+C)*(A+B+C)*(A+B+C)
+
+Qual a forma? qoS
+
+A   B   C   |   F 
+0   0   0   |   0
+0   0   1   |   0
+0   1   0   |   1
+0   1   1   |   1
+1   0   0   |   0
+1   0   1   |   0
+1   1   0   |   1
+1   1   1   |   1
+
+                 _   _       _   _
+F = (A+B+C)*(A+B+C)*(A+B+C)*(A+B+C)
+            _        _        _  _      _   _          
+  = (AA+AB+AC+BA+BB+BC+CA+CB+CC)(A+B+C)(A+B+C)
+             _     _     _      _   _       
+  = (A+AB+B+AC+AC+BC+BC)(A+B+C)(A+B+C)                  [A+AB+B] <=> [AB]
+              _      _   _       
+  = (A+B+A+B)(A+B+C)(A+B+C) 
+          _
+  = (A+B)(A+B)
+     _         _
+  = AA + AB + BA + BB
+        _
+  = AB + BA + B
+              _
+  = B(1 + A + A)
+
+  = B 
+

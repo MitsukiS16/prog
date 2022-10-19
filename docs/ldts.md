@@ -11,8 +11,8 @@
   <a href="#arrow_right-week-1">Week 1</a> •
   <a href="#arrow_right-week-2">Week 2</a> •
   <a href="#arrow_right-week-3">Week 3</a> • 
-  Week 4</a> • 
-  Week 5</a> • 
+  <a href="#arrow_right-week-3">Week 4</a> • 
+  <a href="#arrow_right-week-3">Week 5</a> • 
   Week 6</a> • 
   Week 7</a>
 </p>
@@ -21,8 +21,8 @@
 <p align="center">
   <a href="#arrow_right-git">Git</a> • 
   <a href="#arrow_right-java">Java</a> • 
-  Gradle</a> • 
-  Tests</a> • 
+  <a href="#arrow_right-java">Gradle</a> • 
+  <a href="#arrow_right-java">Tests</a> • 
   SOLID Principles</a> • 
   UML</a> • 
   Design Patterns</a> • 
@@ -53,6 +53,29 @@
 - [ ] Lab tutorial: Java and Gradle (1/2)
 
 Notes: JDK >= 17
+
+### :arrow_right: **Week 4**
+
+- [ ] 
+- [ ]
+- [ ]
+
+### :arrow_right: **Week 5**
+
+- [ ] 
+- [ ]
+- [ ]
+
+----
+
+### **Test 1**
+
+> Duracao: 1h
+
+
+
+> Executar modo debugging [nao sai no teste]
+> Podemos executar este mood nos testes [nao sai no teste]
 
 ----
 
@@ -522,3 +545,51 @@ public class Light {
 
 
 
+
+
+
+### :arrow_right: **Gradle**
+
+
+
+
+
+### :arrow_right: **Tests**
+
+
+
+Developers, preocupados a testar funcionalidades
+Framework, infraestrutura/ execucao da app
+
+For each test
+> setup context
+> run the test
+> collect results
+> clean the context
+
+VersaoAntiga -> VersaoRecente
+@Before -> @Before Each
+
+
+
+
+Executar SetUp [Slide 15]:
+1º Before
+2º Teste 
+3º Aftet
+
+Mesmo codigo Mas em Groome?Stocker?? [Slide 16]:
+> SetUp é uma palavra reservada, antes de cada teste
+> Clean é uma palavra reservada, depois de cada teste
+
+
+
+
+
+
+
+
+
+
+
+[-Fim-]
