@@ -6,17 +6,6 @@
  Professor: André Restivo
 ```
 
-## :heart: **Week**
-<p align="center">
-  <a href="#arrow_right-week-1">Week 1</a> •
-  <a href="#arrow_right-week-2">Week 2</a> •
-  <a href="#arrow_right-week-3">Week 3</a> • 
-  <a href="#arrow_right-week-3">Week 4</a> • 
-  <a href="#arrow_right-week-3">Week 5</a> • 
-  Week 6</a> • 
-  Week 7</a>
-</p>
-
 ## :heart: **Info**
 <p align="center">
   <a href="#arrow_right-git">Git</a> • 
@@ -31,40 +20,9 @@
 
 ## :heart: **Lad Tutorial**
 - [X] Lab Tutorial: GitHub
-- [ ] Lab Tutorial: Java and Gradle (1/2)
-
-----
-
-### :arrow_right: **Week 1**
-
-- [X] LDTS 2022-2023
-- [X] Git
-  - [X] Leaning git branching
-- [X] Git vs Github
-
-### :arrow_right: **Week 2**
-
-- [ ] Java
-- [X] Lab Tutorial: GitHub
-- [ ] Projeto Intelij
-
-### :arrow_right: **Week 3**
-
-- [ ] Lab tutorial: Java and Gradle (1/2)
-
-Notes: JDK >= 17
-
-### :arrow_right: **Week 4**
-
+- [X] Lab Tutorial: Java and Gradle 
+- [ ] Lab Tutorial: Unit testing with JUnit and Spock
 - [ ] 
-- [ ]
-- [ ]
-
-### :arrow_right: **Week 5**
-
-- [ ] 
-- [ ]
-- [ ]
 
 ----
 
@@ -84,7 +42,7 @@ Notes: JDK >= 17
 *VCS* [Version Control System]
 > A system that records changes to a file or set of files over time, like revert selected files or a project, compare changes over time, see who modified, etc
 
-> [[VIDEO] Version Control System Introduction](https://www.youtube.com/watch?v=zbKdDsNNOhg)
+> [[VIDEO]André Restivo __ git Version Control System Introduction](https://www.youtube.com/watch?v=zbKdDsNNOhg)
 
 
 *Local VCS*
