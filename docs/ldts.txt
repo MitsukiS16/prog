@@ -1,0 +1,287 @@
+Design Patterns
+> A general, reusable solution to a commonly occurring problem within a given context in software design.
+> It is not a finished design that can be transformed directly into source code.
+> It is a description or template for how to solve a problem that can be used in many different situations.
+
+
+GoF Patterns
+There are 23 design patterns described by the Gang of Four:
+> Creational -> ex: Abstract Factory, Factory Method 
+> Structural -> ex: Adapter, Composite, Decorator
+> Behavioral -> ex: Command, Observer, State, Strategy
+
+
+Documentation
+> The documentation for a design pattern describes the context in which the pattern is used, the forces within the context that the pattern seeks to resolve, and the suggested solution.
+
+
+Factory Method
+> "Define an interface for creating an object, but let sub-classes decide which class to instantiate."
+> Motivation -> A framework for applications that can present multiple documents to the user.
+> Applicability -> Use the factory method pattern when: a class can't anticipate the class of objects it must create; a class wants the subclasses to specify the objects it creates; classes delegate responsibility to one of several helper classes, and you want to localize the knowledge of which helper subclass is the delegate.
+> Consequences -> Factory methods eliminate the need to bind application-specific classes into your code. The code only needs to deal with the Product interface; therefore it can work with any user-defined ConcreteProduct classes.
+> Variations -> Creator might not be abstract and provide a default implementation for the FactoryMethod. Factory Method might take a parameter specifying the type of product to create. Using Generics/Templates to avoid subclassing the Creator.
+
+
+Composite
+> "Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions uniformly."
+> Motivation -> A graphics application where shapes can be composed into groups.
+> Applicability -> Use the composite pattern when: you want to represent part-whole hierarchies of objects; you want clients to be able to ignore the difference between compositions of objects and individual objects.
+> Consequences -> Primitive objects can be composed into more complex objects.
+Clients can be kept simple. Easier to add new types of components.
+> Variations -> Maintaining references from child components to their parents. Sharing components. Child ordering. Caching to improve performance.
+
+
+Command
+> "Encapsulate a request as an object thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations."
+> Applicability -> Use the command pattern when: parameterize objects by an action to perform; specify, queue, and execute requests at different times; support undo/redo operations; support logging changes so they can be reapplied; structure a system around high-level operations built on primitive operations.
+> Consequences -> Decouples the object that invokes the operation from the one that knows how to perform it. Commands can be extended and manipulated like any other object. You can create Composite commands. It's easy to add new commands.
+> Variations -> Commands only delegating to Receiver actions or doing all the work by themselves. Support undo/redo instead of only action. Avoiding error accumulation in undo operations.
+
+
+Observer
+> "Define a one-to-many dependency between objects so that when one object changes status all its dependents are notified and updated automatically."
+> Applicability -> Use the observer pattern when: When an abstraction has two aspects one dependent on the other; When a change to one object requires changing others; When an object should be able to notify other objects without making assumptions about who those objects are.
+> Consequences -> Abstract coupling between subject and observer. Support for broadcast communication. Unexpected updates.
+> Variations -> Observing more than one subject. Who triggers the update (client or subject)? Push and pull models. Specifying "events of interest" explicitly.
+
+
+Strategy
+> "Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary depending from clients that use it."
+> Applicability -> Use the strategy pattern when: many related classes differ only in their behavior;  you need different variants of an algorithm; an algorithm uses data that clients should not know about; a class defines many behaviors that appear in multiple conditional statements.
+> Consequences -> An alternative to subclassing. Eliminates conditional statements.
+Provides different implementations. Clients must be aware of different strategies.
+> Variations -> Strategy and Context must have well defined interfaces for exchanging any needed data. Strategy can be optional if context has default behavior.
+
+
+State
+> "Allow an object to alter its behavior when its internal state changes. The object will appear to change its class."
+> Applicability -> Use the state pattern when: an object behavior depends on its state, and it must change that state in run-time; operations have large, multipart conditional statements that depend on one or more enumerated constants.
+> Consequences -> Localizes and partitions behavior for different states. Makes state transitions explicit.
+> Variations -> Who defines the criteria for state transitions? More flexible solution is to let the states define the transitions. When are state objects created and destroyed? Easier to create and destroy when state changes. Better to only create them once and never destroy them.
+
+
+Adapter
+> "Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces."
+> Applicability -> Use the adapter pattern when: you want to use an existing class, and the interface does not match the one you need; you want to create a reusable class that work with unforseen classes.
+> Structure -> Two different alternatives: Class adapter: Using multiple inheritance (if available). Object adapter: Using composition.
+
+
+Decorator
+> "Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality."
+> Applicability -> Use the decorator pattern when: to add responsibilities for individual objects dynamically and transparently; for responsibilities that can be withdrawn; when extension by subclassing is impractical (many different combinations 🠒 explosion of subclasses).
+> Consequences -> More flexible than static inheritance. Avoids classes with too many features and responsibilities. Lots of little objects.
+< Structure -> "Changing the object guts (Strategy) versus changing the object skin (Decorator)".
+
+
+Singleton
+> "Ensure a class only has one instance and provide a global point to acess it."
+> Applicability -> Use the singleton pattern when: there must be exactly one instance of a class; when the sole instance must be extensible by subclassing.
+> Consequences -> The singleton pattern is considered an anti-pattern: The assumption that there will ever be only one instance is often broken during a project's lifetime.
+Makes it very difficult to test code. Difficult to implement correctly when taking multi-threading into account.
+> What to use instead -> Instantiate a single instance and propagate it to places that use the object as a parameter.
+> Variations -> When to create the unique instance? At application start. When instance() is called for the first time.
+
+
+Abstract-Factory
+> "Provide an interface for creating families of related or dependent objects without specifying the concrete classes."
+> Applicability -> Use the abstract factory pattern when: a system should be independent from how its products are created, composed and represented; a system should be configurable with one or more families of products; a family of products is designed to work together and you need to reinforce this constraint.
+> Consequences -> It isolates concrete classes. It makes exchanging product families easy. It promotes consistency among products. Supporting new types of products is difficult.
+
+
+Architectural Patterns
+> An Architectural style is responsible for how we should organize our code (monolithic, pipes and filters, plugins, microservices, ...).
+> Architectural patterns are patterns that deal with the architectural style of software.
+> Some examples:
+.Model-View-Controller (commonly used in GUIs)
+.Pipe-Filter (pipes guide data from filter to filter)
+.Broker (message queues e.g. RabbitMQ)
+
+
+Model-View-Controller (MVC)
+> An architectural pattern commonly used for developing user interfaces that divides an application into three parts.
+> The model only represents the data.
+> The view displays the model data, and sends user actions to the controller.
+> The controller provides model data to the view, and interprets user actions.
+
+
+MVC Variants
+> There are several variants to the MVC pattern and even the MVC hasn't got a single interpretation:
+.HMVC - Hierarchical Model-View-Controller: Each visual component has its own MVC model.
+.MVVM - Model-View-ViewModel: Uses a ViewModel as a binder between the model and the view.
+.MVP - Model-View-Presenter: The Presenter sits in the middle of the View and the Model mediating the actions between them.
+
+
+[--]
+
+SOLID
+
+Software Rot
+Even when software design starts as a pristine work of art, portraying a clean and elegant image as idealized by the designer, it eventually starts to rot:
+> It starts with a small hack but the overall beauty of the design is still there.
+> The hacks start accumulating, each one another nail in the coffin.
+> The code eventually becomes an incredibly hard-to-maintain mess.
+
+
+System Redesign
+> At this point, a redesign is needed. But the old code is still in production, evolving and changing.
+> So the system redesign is trying to shoot at a moving target.
+> Problems start to accumulate in the new design before it is even released.
+
+
+Symptoms of Rotting Design 
+> Rigidity
+> Fragility
+> Immobility
+> Viscosity
+
+
+Rigidity
+> The tendency for software to be difficult to change.
+> Every change causes a cascade of subsequent changes.
+When software behaves this way, managers fear allowing engineers to fix non-critical problems (as they may disappear for long periods).
+
+
+Fragility
+> The tendency of software to break in many places every time it is changed.
+> Often in areas that have no conceptual relationship with the area that was changed.
+When software behaves this way, managers and customers start to suspect that the developers have lost control of their software.
+
+
+Immobility
+> The inability to reuse software from other projects or parts of the same project.
+> The work and risk required to separate the desirable parts of the software from the undesirable parts are too great to tolerate.
+Software ends up being rewritten.
+
+
+Viscosity
+The viscosity of the design:
+> There is more than one way to make a change: preserving the design, and hacks.
+> The design-preserving methods are harder to employ than the hacks.
+The viscosity of the environment:
+> The development environment is slow and inefficient (long compile times, complicated and long check-in procedures, ...).
+> Developers end up choosing solutions that require as few changes as possible, regardless of whether the design is preserved.
+
+
+Causes of Rotting Design
+> Changing Requirements
+> Dependency Hell
+
+
+Changing Requirements
+> Requirements change in ways that the initial design did not anticipate.
+> Often changes are urgent, and hacks are used to make them; even if it deviates from the original design.
+Changing requirements should not be a surprise, and blaming them is the easy way out:
+> The system design must be resilient to these changes from the start.
+
+
+Dependency Hell
+If we analyze the four symptoms of rotting design just presented, carefully, there is one common theme among them: improper dependencies between modules.
+> The initial design properly separates the responsibilities of each module; dependencies seem logical and stratified**.
+> As time goes by, hacks (needed because of unforeseen requirement changes), introduce unwanted dependencies.
+
+
+Principles of Object-Oriented Design
+(S) -> The Single responsibility Principle (SRP)
+(O) -> The Open-Closed Principle (OCP)
+(L) -> The Liskov Substitution Principle (LSP)
+(I) -> The Interface Segregation Principle (ISP)
+(D) -> The Dependency Inversion Principle (DIP)
+
+
+SRP
+"Each software module should have one and only one reason to change."
+> If a module assumes more than one responsibility, then:
+> There will be more than one reason for it to change.
+> Changes to one responsibility may impair the ability to meet the others.
+> It might force unwanted and unneeded dependencies.
+Gather together the things that change for the same reasons. Separate those things that change for different reasons — Uncle Bob, 2014
+> If the application is not changing in ways that cause the two responsibilities to change at different times, then there is no need to separate them.
+> It is not wise to apply the SRP if there is no symptom (needless complexity).
+
+
+OCP
+A module should be open for extension but closed for modification.
+> We should write our modules so that they can be extended, without requiring them to be modified.
+> So we can add new features to existing code, by only adding (and not modifying) new code.
+
+
+LSP
+Subclasses should be substitutable for their base classes.
+> A client of a base class should continue to function properly if a derivative of that base class is passed to it.
+> This might seem obvious at first, but many times it's hard to detect that this principle is being broken.
+
+
+LSP as Contracts
+Resemblance to Bertrand Meyer's "design by contract".
+A derived class is substitutable for its base class if:
+1. Its preconditions are no stronger than the base class method.
+2. Its postconditions are no weaker than the base class method.
+Or, in other words, derived methods should expect no more and provide no less.
+
+
+ISP
+Many client specific interfaces are better than one general purpose interface.
+> Clients should not be forced to depend upon interfaces that they do not use.
+> Clients should be categorized by their type, and interfaces for each type of client should be created.
+> If two or more different client types need the same method, the method should be added to both of their interfaces.
+Makes the code more readable and manageable.
+Promotes the single responsibility principle (SRP).
+
+
+DIP
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+Abstractions should not depend on details. Details should depend on abstractions.
+> We are not just changing the direction of the dependency.
+> We are splitting the dependency by putting an abstraction in the middle.
+Concrete things change a lot, abstract things change much less frequently.
+> No client code has to be changed simply because an object it depends on needs to be changed to a different one (loose coupling).
+> Promotes testability.
+> Promotes replaceability.
+
+
+Principles of Package Architecture
+
+> The Release Reuse Equivalency Principle (REP)
+The granule of reuse is the granule of release.
+- Code should not be reused by copying it from one class and pasting it into another.
+- Only components that are released through a tracking system can be effectively reused.
+
+> The Common Closure Principle (CCP)
+Classes that change together, belong together.
+- If the code in an application must change, changes should be focused on a single package.
+- If two classes almost always change together, then they belong in the same package.
+Maintainability!
+
+> The Common Reuse Principle (CRP)
+Classes that aren’t reused together should not be grouped together.
+- Reusable classes collaborate with other classes that are part of the reusable abstraction.
+- These classes belong in the same package.
+Reusability!
+
+
+The Package Coupling Principles
+
+> The Acyclic Dependencies Principle (ADP)
+The dependencies between packages must not form cycles.
+- The dependency graph should be a DAG (directed acyclic graph).
+- Cycles in the dependency graph are effectively large packages.
+- Cycles can be broken using the dependency inversion principle (DIP).
+
+> The Stable Dependencies Principle (SDP)
+Depend in the direction of stability.
+- Stable means "hard to change" (many clients), while unstable means "easy to change".
+- Modules that are "hard to change" should not depend on modules that are "easy to change".
+- The reason is that it makes the "easy to change" module "harder to change" because of the impact on the depending module.
+- You need "easy to change" packages, or your software cannot change easily.
+
+> The Stable Abstractions Principle (SAP)
+Stable packages should be abstract packages.
+- A package can be said to be "harder to change" as more packages depend on it.
+- So it should be made abstract so that it can be extended when necessary.
+- A package that is not used by other packages can be "changed easily", so it can remain concrete.
+
+
+
+
+[FIM]

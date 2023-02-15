@@ -1,0 +1,61 @@
+20230207 - AULA 1 - PP RISC-V: COMPLEMENTOS
+
+Definilão e uso de sub-rotinas
+
+Cada instrução ocupa 2 bits em memória - 4 bytes
+jal => | ra <- endereço da instrucao que segue a "jal"
+       | pc <- endereço de func 
+
+Regras de uma sub-rotina:
+1> Colocar argumentos nos registos a0 até a a7
+2> Transferir o controlo de execução para a sub-rotina
+3> Alocar memória para armazenas a informação localize
+4> Executar o código da sub-rotina 
+5> Colocar o resultado no registo a0
+6> Transferir controlo de volta para o local de chamada
+
+Ex: Calcular x^2+1, meter expressao numa subrotina e executa qnd é chamada
+Ex: Se tenho 3 argumentos, então, uso a0, a1, a2
+
+Pilha
+
+ocupado e livre     -> Pilha
+.data               -> Dados
+.text               -> Segmentos de codigo 
+
+regiao livre, é regiao onde posso adicionar dados adicionais
+
+apontador da pilha -> endereço do top da pilha (parte inferior)
+
+char/byte - 1 byte
+short/halfword - 2 bytes
+int/word - 4 bytes
+void/word - 4 bytes
+long long/doubleword - 8 bytes 
+
+
+jalr -> expressao mult utilizada nos exercícios
+jalr x0, x1, 0 <=> related
+
+Caller:
+SUBR1:  ...
+        add t1, zero, 3
+        call subr2
+        lw ... 
+
+Callee:
+SUBR2:  ADD t1, t1, t1              # t1 <- 6
+        ...
+        ...
+        RET
+
+apartir de momento que volta com ret, volta com o t1=6
+
+Regras quem deve preservar registos:
+> ra(x1): guardar endereço de retorno
+> t0-t6: registos temporários
+> a0-a7: argumentos de sub-rotinas e retorno de resultado
+> s0:s11: registos save
+
+
+-----------------------------------------------------------------------

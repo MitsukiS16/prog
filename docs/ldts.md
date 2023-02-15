@@ -506,43 +506,9 @@ public class Light {
 
 
 
-### :arrow_right: **Gradle**
 
 
-
-
-
-### :arrow_right: **Tests**
-
-
-
-Developers, preocupados a testar funcionalidades
-Framework, infraestrutura/ execucao da app
-
-For each test
-> setup context
-> run the test
-> collect results
-> clean the context
-
-VersaoAntiga -> VersaoRecente
-@Before -> @Before Each
-
-
-
-
-Executar SetUp [Slide 15]:
-1º Before
-2º Teste 
-3º Aftet
-
-Mesmo codigo Mas em Groome?Stocker?? [Slide 16]:
-> SetUp é uma palavra reservada, antes de cada teste
-> Clean é uma palavra reservada, depois de cada teste
-
-
-
-
+### :arrow_right: **Design Patterns**
 
 
 
