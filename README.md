@@ -23,33 +23,3 @@
   </a>  
 </p>
 
-
-## **UC's**
-
-<p align="center"> 
-  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/bdad.md"> BDad 
-  </a>
-  • 
-  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/so.md"> SO 
-  </a>
-  •
-  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/ldts.md"> LDTS 
-  </a>
-  •
-  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/fsc.md"> FSC 
-  </a>
-    •
-  <a href="https://github.com/MitsukiS16/uni/blob/main/docs/f2.md"> F2
-  </a>
-
-</p>
-
-
-## **Moment of Evaluation** 
-
-| UC | Date | Type | Other |
-| --- | --- | --- | --- | 
-| LDTS | 24 out | Test - T| - | 
-| SO | 26 out | Test - T | - | 
-| --- | --- | --- | --- | 
-| --- | --- | --- | --- | 
