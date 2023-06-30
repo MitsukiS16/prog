@@ -1,3 +1,0 @@
-Teste sao 20 questoes
-16 sobre a materia + 4 sobre o trabalho
-Se acertar 1 valor, se errar -1/3
