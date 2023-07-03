@@ -8,7 +8,7 @@ int main()
     int k = 0, d = 0;
     cin >> k;
     cin >> d;
-    int x = 999;
+    int x = 0;
 
     cout << fixed << setprecision(d) << x;
     return 0;
