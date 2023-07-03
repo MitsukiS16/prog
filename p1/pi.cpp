@@ -10,8 +10,6 @@ int main()
     cin >> d;
     int x = 999;
 
-    fo
-
     cout << fixed << setprecision(d) << x;
     return 0;
 }
