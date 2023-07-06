@@ -1,0 +1,158 @@
+Arquitetura de Computadores
+
+RISC-V
+> Arquitetura de conjunto de instruções reduzido. 
+
+RISC-V Assembly
+> Linguagem de programacao de baixo nível usada para escrever programas direcionadas com Arquitetura RISC-V
+
+SubRotinas
+> Sao subprogramas -> blocos de código que podem ser chamados de outros locais 
+
+Registradores
+> Armazenar dados temporarios
+> Executar operacoes aritmeticas e logicas
+> Armazenar endereços de memoria
+> Armazenas flags e sinais de controlo 
+
+Registradores RISC-V
+> Existem 32 registradores de uso geral -> 0 a 31
+> x0 é um registrador especial que tem o valor 0
+> registradores de dados temporários -> x1 a x31
+> registradores de ponto flutuante -> f0 a f31
+
+Comportamento dos registradores em relação às chamdas de subrotinas: 
+Registos preservados -> registradores que uma rotina preserva
+> Seguros -> s0-s11
+> Endereço de retorno -> ra (registrador que armazena o endereco de retorno de uma chamada de funcao)
+> ponteiro para pilha -> sp (registrador que armazena o endereco de inicio da pilha)
+Registos não preservados -> registradores que uma rotina nao preserva
+> Temporários -> t0-t6
+> Argumentos e resultados -> a0-a7
+
+Pilha
+> área de memória usada para armazenar dados temporários, contexto de chamada de função, variáveis locais e outras informacoes relacionadas a execucao de sub-rotinas
+> pilha no RISC-V cresce para baixo, o que significa que os dados mais antigos permanencem em posicoes superiores. 
+> O ponteiro para a pilha deve ter um endereço multiplo de 16 bytes (ponteiro alinhado)
+
+Memória em subrotinas
+> durante a execucao de uma sub-rotina, a memória é utilizada para armazenar informações temporárias
+> a memoria pilha preserva os registradores para evitar perda 
+> a rececao de parametros de uma subrotina é feita atraves da pilha
+> após a conclusao da subrotina, é necessario restaurar os valores originais dos registradores e retornar ao ponto de chamada. os valores na pilha sao recuperados, e os registradores retornam ao valor original. 
+
+Regras de alinhamento
+> char      -> byte         -> nº bytes = 1
+> short     -> halfword     -> nº bytes = 2
+> int       -> word         -> nº bytes = 4
+> void*     -> word         -> nº bytes = 4
+> long long -> doubleword   -> nº bytes = 8
+
+
+
+
+
+
+FUNCAO EXEMPLO 1
+C 
+int sum(int a, int b) { return a + b; }
+
+ASSEMBLY 
+sum:
+    add a0, a0, a1 
+    jalr x0, x1, 
+
+
+
+FUNCAO EXEMPLO 2
+C
+int calc(int x, int y) { return (x + 5) * (y + 1); }
+
+ASSEMBLY 
+calc: 
+    addi sp, sp, -16
+    sw s0, 12(sp)
+    sw s1, 8(sp)
+    addi s0, a0, 5
+    addi s1, a1, 1 
+    mul a0, s0, s1
+    lw s1, 8(sp)
+    lw s0, 12(sp)
+    addi sp, sp, 16
+    jalr zero,ra,0
+
+
+FUNCAO EXEMPLO 3
+C 
+int rotina(int v[], int n)
+{
+    volatile int total = 0;
+    for (int i = 0; i<n; i++){
+        if (v[i] == 0) total = total + 1;
+    }
+    return total;
+}
+
+ASSEMBLY 
+rotina:
+    addi sp,sp,-16
+    sw zero,12(sp) # total
+    ble a1,zero,.L4
+    slli a1,a1,2
+    add a4,a0,a1 # final
+.L6:
+    lw a5,0(a0)
+    addi a0,a0,4
+    bne a5,zero,.L5
+    lw a5,12(sp)
+    addi a5,a5,1
+    sw a5,12(sp)
+.L5:
+    bne a0,a4,.L6
+.L4:
+    lw a0,12(sp)
+    addi sp,sp,16
+    jalr zero,ra,0
+
+
+
+
+FUNCAO EXEMPLO 4
+C 
+int square(int num) { return num * num; }
+
+ASSEMBLY 
+square:
+    mul a0, a0, a0
+    ret # jr    ra
+
+
+
+Modelos de execucao de instrucoes
+SISD    cada instrucao processa 1 conjunto de dados -> CPU executa uma unica isntrucao em um unico processador, e processa apenas uma vez
+SIMD    uma instrucao processa varios conjuntos de dados -> uma unica instrucao é aplicada em varios conjuntos de dados
+MIMD    multiplas instrucoes processam multiplos conjuntos de dados -> multiplos CPUs executam instrucoes diferentes.
+
+
+INSTRUCOES SIMD
+Vantagens
+● Aumento de desempenho
+● Aproveitamento da capacidade de integração (capacidade de integrar número elevado de ALUs e outras unidades de processamento)
+● Paralelismo explícito é fácil de aproveitar (operações são naturalmente independentes)
+Desvantagens
+● Aplicáveis apenas em algoritmos com processamento de dados “regular” (todos os elementos do vetor são processados da mesma forma)
+● Necessidade de adaptar a codificação do algoritmo
+● Compiladores podem ter dificuldade em aproveitar bem este tipo de instruções: recurso a linguagem assembly.
+
+
+
+
+
+
+FUNCAO EXEMPLOS - VER SLIDES 21 22 23
+
+
+
+
+
+[--FIM--]
